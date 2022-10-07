@@ -185,9 +185,9 @@ body {
   display: flex;
   /*align-items: center;
   /*justify-content: center;*/
-  width: 450px;
-  height: 450px;
-  margin-left: 0px; 
+  width: 200px;
+  height: 200px;
+  margin-left: -100px; 
 }
 
 
@@ -283,8 +283,8 @@ section::before
 /*contact*/
 .contact {
           position: relative;   
-          top: -50px;
-          left :500px;
+          top: 0px;
+          left: 50px;
           }
 .container .contactInfo h2
 {
