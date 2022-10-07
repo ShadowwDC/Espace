@@ -283,7 +283,7 @@ section::before
 /*contact*/
 .contact {
           position: relative;   
-          top: 0px;
+          top: -25px;
           left: 825px;
           }
 .container .contactInfo h2
