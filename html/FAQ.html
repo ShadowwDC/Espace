@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espace</title>
+    <script type="text/javascript" src="//code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="../css/MyStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
@@ -39,25 +40,41 @@
 <br><br><br>
     <!--Début Texte-->
     <center>
-        
+        <br><br>
 
-    <button class="accordion">Combien de satellites tournent autour de la Terre ?</button> <br><br>
-    <div class="panel">        
-    <p>
-    Selon l'association UCS (Union of Concerned Scientists), <br>
+        <div class="faq_container">
+            <div class="faq">
+                <div class="faq_question">Combien de satellites tournent autour de la Terre ?
+        </div>
+                
+          
+                <div class="faq_answer_container">
+                    <div class="faq_answer">Selon l'association UCS (Union of Concerned Scientists), <br>
     2.063 satellites opérationnels étaient en orbite autour de la Terre au 1er avril 2019. <br>
-    Le plus ancien encore en opération est un satellite amateur américain, Amsat-Oscar 7 (AO-7), lancé le 15 novembre 1974. <br><br><br><br>
-    </p>
-    </div>
+    Le plus ancien encore en opération est un satellite amateur américain, Amsat-Oscar 7 (AO-7), lancé le 15 novembre 1974.
+                        </div>
+                 </div>        
+          </div>
+     <br><br><br><br>
+    
+   
 
 
-    La croûte martienne est-elle différente de la croûte terrestre ? <br><br>
+     <div class="faq_container">
+        <div class="faq">
+            <div class="faq_question">La croûte martienne est-elle différente de la croûte terrestre ? <br><br>
+        </div>  
 
-    Comme la Terre, Mars possède différentes enveloppes géologiques : un noyau, un manteau et une croûte. <br>
+        <div class="faq_answer_container">
+            <div class="faq_answer">Comme la Terre, Mars possède différentes enveloppes géologiques : un noyau, un manteau et une croûte. <br>
     Alors que nous devons notre connaissance de la structure interne de la Terre <br>
     à l’étude des ondes sismiques générées par les grands séismes, <br>
     la structure interne de Mars reste encore mal connue, <br>
-    tout simplement parce que nous ne disposons pas de ce type de données pour la Planète rouge. <br><br><br><br>
+    tout simplement parce que nous ne disposons pas de ce type de données pour la Planète rouge.
+            </div>
+        </div>        
+    </div>
+    <br><br><br><br>
 
     Pourquoi voit-on toujours la même face de la Lune ?<br><br>
 
@@ -97,26 +114,26 @@
     
     </center>    
  <!--début script-->
-<script>
-        var acc = document.getElementsByClassName("accordion");
-        var i;
-        for (i = 0; i < acc.length; i++)
-        {
-         acc[i].addEventListener("click", function()
-                {
-                 this.classList.toggle("active");
-                 var panel = this.nextElementSibling;
-                 if (pannel.style.display === "block") {
-                                                        panel.style.display = "none";
-                                                       }
-        else {
-            panel.style.display = "block";
-        } ) ;
-         
-            }
-        
-        
-</script>
+ 
+ 
+ <script>
+    $(document).ready(function() {
+    
+       $('.faq_question').click(function() {
+    
+           if ($(this).parent().is('.open')){
+               $(this).closest('.faq').find('.faq_answer_container').animate({'height':'0'},500);
+               $(this).closest('.faq').removeClass('open');
+    
+               }else{
+                   var newHeight =$(this).closest('.faq').find('.faq_answer').height() +'px';
+                   $(this).closest('.faq').find('.faq_answer_container').animate({'height':newHeight},500);
+                   $(this).closest('.faq').addClass('open');
+               }
+       });
+   });
+   </script>
+   
 
 <!--fin script-->
 
