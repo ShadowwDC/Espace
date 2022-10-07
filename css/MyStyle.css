@@ -187,7 +187,7 @@ body {
   /*justify-content: center;*/
   width: 720px;
   height: 720px;
-  margin-left: 200px; 
+  margin-left: 100px; 
 }
 
 
@@ -280,10 +280,11 @@ section::before
     box-shadow: 0 20px 25px rgba(0,0,0,0.15); 
     border-radius: 22px;
 }
+/*contact*/
 .contact {
           position: relative;   
-          top: 100px;
-          left :100px;
+          top: -100px;
+          left :1700px;
           }
 .container .contactInfo h2
 {
