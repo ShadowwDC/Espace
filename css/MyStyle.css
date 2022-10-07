@@ -190,6 +190,8 @@ body {
   margin-left: 200px; 
 }
 
+
+
 .faq_question {
   margin: 0px;
   padding: 0px 0px 5px 0px;
@@ -278,7 +280,11 @@ section::before
     box-shadow: 0 20px 25px rgba(0,0,0,0.15); 
     border-radius: 22px;
 }
-
+.contact {
+          position: relative;   
+          top: 100px;
+          left :100px;
+          }
 .container .contactInfo h2
 {
     color: #fff;
