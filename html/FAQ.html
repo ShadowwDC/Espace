@@ -39,13 +39,14 @@
 <br><br><br>
     <!--Début Texte-->
     <center>
-        <p id="forme">
+        
 
-    Combien de satellites tournent autour de la Terre ? <br><br>
-
-    Selon l'association UCS (Union of Concerned Scientists), <br>
+    <button class="accordion">Combien de satellites tournent autour de la Terre ?</button> <br><br>
+    <div class="panel">        
+    <p> Selon l'association UCS (Union of Concerned Scientists), <br>
      2.063 satellites opérationnels étaient en orbite autour de la Terre au 1er avril 2019. <br>
-    Le plus ancien encore en opération est un satellite amateur américain, Amsat-Oscar 7 (AO-7), lancé le 15 novembre 1974. <br><br><br><br>
+    Le plus ancien encore en opération est un satellite amateur américain, Amsat-Oscar 7 (AO-7), lancé le 15 novembre 1974. <br><br><br><br></p>
+    </div>
 
 
     La croûte martienne est-elle différente de la croûte terrestre ? <br><br>
@@ -91,10 +92,31 @@
     Néanmoins, un environnement spatial hostile (variations de température et rayons ionisants), <br>
     un grand nombre de lancements, des destructions en orbite ou des accidents ont généré de nombreux débris. <br>
 
-        </p>
+    
     </center>    
+ <!--début script-->
+<script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        for (i = 0; i < acc.length; i++)
+        {
+         acc[i].addEventListener("click", function()
+                {
+                 this.classList.toggle("active");
+                 var panel = this.nextElementSibling;
+                 if (pannel.style.display === "block") {
+                                                        panel.style.display = "none";
+                                                       }
+        else {
+            panel.style.display = "block";
+        } ) ;
+         
+            }
+        
+        
+</script>
 
-
+<!--fin script-->
 
 
 
